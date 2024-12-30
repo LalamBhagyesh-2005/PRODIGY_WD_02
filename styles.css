@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.stopwatch-container {
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px;
+    background: linear-gradient(135deg, #1f16ce, #feb47b);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.display {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #4CAF50;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.laps {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.laps li {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #555;
+    font-weight: bold;
+    background: #c8bf3d;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.laps li:hover {
+    background: #e0e0e0;
+}
+
+/* Style for the microseconds, seconds, and minutes individually */
+.display span {
+    padding: 0 5px;
+    font-size: 1.2em;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.display span.microseconds {
+    background: #d3d3d3;
+    color: #333;
+    border-radius: 5px;
+}
+
+.display span.seconds {
+    background: #ffeb3b;
+    color: #333;
+    border-radius: 5px;
+}
+
+.display span.minutes {
+    background: #76c7c0;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.display:hover span {
+    transform: scale(1.1);
+} 
